@@ -138,5 +138,6 @@
   b.disabled=true;say('Sending…',true);
   fetch('https://ceehow.app/api/waitlist',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(d)}).then(function(r){return r.json().catch(function(){return{ok:false};}).then(function(j){if(r.ok&&j.ok){f.reset();say("You're on the list! We'll be in touch when SHOW ME launches near you.",true);}else{say((j&&j.error)||'Something went wrong. Please try again or email hello@ceehow.com.');}});}).catch(function(){say('Network error. Please try again or email hello@ceehow.com.');}).then(function(){b.disabled=false;});});})();
   </script>
+  <script data-goatcounter="https://ceehow.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>
 </html>
